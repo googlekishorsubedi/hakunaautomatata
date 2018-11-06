@@ -1,0 +1,24 @@
+[debug] [2018-11-06T15:39:31.086Z] ----------------------------------------------------------------------
+[debug] [2018-11-06T15:39:31.087Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-11-06T15:39:31.088Z] CLI Version:   4.2.1
+[debug] [2018-11-06T15:39:31.088Z] Platform:      darwin
+[debug] [2018-11-06T15:39:31.088Z] Node Version:  v10.10.0
+[debug] [2018-11-06T15:39:31.089Z] Time:          Tue Nov 06 2018 07:39:31 GMT-0800 (Pacific Standard Time)
+[debug] [2018-11-06T15:39:31.089Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-06T15:39:31.099Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-06T15:39:31.100Z] > authorizing via signed-in user
+[debug] [2018-11-06T15:39:31.102Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/hakuna-automatata  
+ 
+[debug] [2018-11-06T15:39:31.547Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-06T15:39:31.548Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/hakuna-automatata  
+ 
+[debug] [2018-11-06T15:39:31.870Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/subedik/Desktop/Hakuna Automatata'...
+[info] 
+[debug] [2018-11-06T15:39:31.872Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/9090691869/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-06T15:39:32.112Z] <<< HTTP RESPONSE 200
+[info] i  hosting[hakuna-automatata]: Serving hosting files from: public
+[info] ✔  hosting[hakuna-automatata]: Local server: http://localhost:5000
