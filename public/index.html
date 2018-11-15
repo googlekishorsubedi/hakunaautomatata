@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css"
-
-    <script src="index.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
@@ -18,95 +11,17 @@
     <script src="firebase.js"></script>
 
   </head>
+  <body>
+    <input type="text" id="loginusername" placeholder="Login Username/Email"><font size="2"> <i> Username doesn't have '@'  </i> </font><br>
+    <input type="password" id="loginpassword" placeholder="Login password">
+    <input type="button" value="LogIn" onclick="signUser(document.getElementById('loginusername').value, document.getElementById('loginpassword').value);">
+    <br> <br><br><br>
 
-</body>
-  <div class="container center-block">
-
-  <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-  		<form role="form">
-  			<h2>Welcome to Hakuna Automatata</h2>
-  			<hr class="colorgraph">
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-                          <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-  						<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
-  					</div>
-  				</div>
-  			</div>
-  			<div class="form-group">
-  				<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Username" tabindex="3">
-  			</div>
-  			<div class="form-group">
-  				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-  			</div>
-  			<div class="row">
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-  						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-  					</div>
-  				</div>
-  				<div class="col-xs-12 col-sm-6 col-md-6">
-  					<div class="form-group">
-  						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-  					</div>
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div class="col-xs-4 col-sm-3 col-md-3">
-  					<span class="button-checkbox">
-  						<button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
-                          <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-  					</span>
-  				</div>
-  				<div class="col-xs-8 col-sm-9 col-md-9">
-  					 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
-  				</div>
-  			</div>
-
-  			<hr class="colorgraph">
-  			<div class="row">
-  				<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" onclick="createNewUser(document.getElementById('username').value, document.getElementById('email').value, document.getElementById('password').value);" tabindex="7"></div>
-  				<div class="col-xs-12 col-md-6"><a href="login.html" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-  			</div>
-  		</form>
-  	</div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  	<div class="modal-dialog modal-lg">
-  		<div class="modal-content">
-  			<div class="modal-header">
-  				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-  				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
-  			</div>
-  			<div class="modal-body">
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-  			</div>
-  			<div class="modal-footer">
-  				<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
-  			</div>
-  		</div><!-- /.modal-content -->
-  	</div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  </div>
-  <script src="app.js"></script>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <input type="text" id="signupemail" placeholder="Signupemail">
+    <input type="password" id="signuppassword" placeholder="password">
+    <input type="text" id="username" placeholder="username"> <font size="2"> <i> NO '@' allowed </i> </font> <br>
+    <br>
+    <input type="button" value="SignUp" onclick="createNewUser(document.getElementById('username').value, document.getElementById('signupemail').value, document.getElementById('signuppassword').value);">
+    <script src="app.js"></script>
   </body>
 </html>

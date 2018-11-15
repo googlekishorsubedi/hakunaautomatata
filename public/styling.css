@@ -1,0 +1,33 @@
+h2 {
+    text-align: center;
+    height: 50px;
+    width: 25%;
+    background-color: rgb(176, 230, 180);
+}
+
+body {
+    background-color: lightblue;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center-div
+{
+     margin: 0 auto;
+     width: 400px; 
+     height: 80px;
+     background-color: rgb(19, 172, 161);
+}
+
+.leaderboard
+{
+    float: right;
+    width: 400px; 
+    height: 500px;
+    background-color: rgb(150, 125, 46);
+}
