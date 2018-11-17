@@ -17,7 +17,8 @@ function registerUser(name, uid, email)
 		firestore.collection("users").doc(uid).set({
 			emailaddress: email,
 			username: name,
-			score:0
+			score:0,
+			timesPlayed:0
 		}).then(function(){
 			
 		}).catch(function(error){

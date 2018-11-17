@@ -25,6 +25,37 @@ firebase.auth().onAuthStateChanged(function(user){
     // var username = firebase.collection("users").doc(user.uid).get()
 })
 
+function takemetochallenge(){
+	//update user's timesPlayed by 1.
+	var userRef = firestore.collection("users").doc(firebase.auth().currentUser.uid);
+	var localtimesPlayed;
+	
+	userRef.get().then(function(doc) {
+		if (doc.exists) {
+			localtimesPlayed = doc.data().timesPlayed;
+			userRef.update({
+				timesPlayed: localtimesPlayed+1
+			})
+			.then(function() {
+				console.log("Document successfully updated!");
+				document.location.href = "q1.html";
+			})
+			.catch(function(error) {
+				// The document probably doesn't exist.
+				console.error("Error updating document: ", error);
+			});
+		
+
+		} else {
+			// doc.data() will be undefined in this case
+			console.log("No such document!");
+		}
+	}).catch(function(error) {
+		console.log("Error getting document:", error);
+	});
+	
+}
+
 function printName(user){
     document.getElementById("name").innerHTML = user.displayName;
 }
