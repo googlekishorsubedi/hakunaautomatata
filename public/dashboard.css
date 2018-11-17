@@ -1,4 +1,6 @@
-
+.navbar {
+  color: #ffffff
+}
 body {
  min-height: 450px;
  height: 100vh;
